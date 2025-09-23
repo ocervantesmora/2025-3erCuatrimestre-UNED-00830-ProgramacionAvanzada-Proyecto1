@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CervantesOscar-Proyecto1/1.0.0": {
+        "runtime": {
+          "CervantesOscar-Proyecto1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CervantesOscar-Proyecto1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\LogicaDeNegocio.deps.json
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\LogicaDeNegocio.dll
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\LogicaDeNegocio.pdb
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\AccesoADatos.dll
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\Entidades.dll
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\AccesoADatos.pdb
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\bin\Debug\net6.0\Entidades.pdb
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.csproj.AssemblyReference.cache
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.AssemblyInfoInputs.cache
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.AssemblyInfo.cs
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.csproj.CopyComplete
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.dll
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\refint\LogicaDeNegocio.dll
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\LogicaDeNegocio.pdb
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\Logica de Negocio\obj\Debug\net6.0\ref\LogicaDeNegocio.dll
