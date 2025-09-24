@@ -30,6 +30,7 @@
         {
             btnRegistrarCriaturas = new Button();
             btnRegistrarJugador = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnRegistrarCriaturas
@@ -52,11 +53,22 @@
             btnRegistrarJugador.UseVisualStyleBackColor = true;
             btnRegistrarJugador.Click += btnRegistrarJugador_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(142, 239);
+            button1.Name = "button1";
+            button1.Size = new Size(192, 50);
+            button1.TabIndex = 2;
+            button1.Text = "Registrar Inventario";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // frmVentanaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(btnRegistrarJugador);
             Controls.Add(btnRegistrarCriaturas);
             Name = "frmVentanaPrincipal";
@@ -68,5 +80,6 @@
 
         private Button btnRegistrarCriaturas;
         private Button btnRegistrarJugador;
+        private Button button1;
     }
 }

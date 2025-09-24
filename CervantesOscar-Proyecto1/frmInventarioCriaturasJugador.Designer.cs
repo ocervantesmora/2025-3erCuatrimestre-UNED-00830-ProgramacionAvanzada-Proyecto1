@@ -28,42 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
-            comboBox1 = new ComboBox();
+            dgvCriaturas = new DataGridView();
+            dgvCriaturasAdquiridas = new DataGridView();
+            cmbJugadores = new ComboBox();
             label1 = new Label();
             btnAgregar = new Button();
             btnVolver = new Button();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            lblCristales = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvCriaturas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCriaturasAdquiridas).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCriaturas
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 50);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(760, 189);
-            dataGridView1.TabIndex = 0;
+            dgvCriaturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCriaturas.Location = new Point(12, 50);
+            dgvCriaturas.Name = "dgvCriaturas";
+            dgvCriaturas.RowTemplate.Height = 25;
+            dgvCriaturas.Size = new Size(760, 189);
+            dgvCriaturas.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvCriaturasAdquiridas
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 345);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(760, 204);
-            dataGridView2.TabIndex = 1;
+            dgvCriaturasAdquiridas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCriaturasAdquiridas.Location = new Point(12, 345);
+            dgvCriaturasAdquiridas.Name = "dgvCriaturasAdquiridas";
+            dgvCriaturasAdquiridas.RowTemplate.Height = 25;
+            dgvCriaturasAdquiridas.Size = new Size(760, 204);
+            dgvCriaturasAdquiridas.TabIndex = 1;
+            dgvCriaturasAdquiridas.CellFormatting += dgvCriaturasAdquiridas_CellFormatting;
             // 
-            // comboBox1
+            // cmbJugadores
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(77, 302);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(199, 23);
-            comboBox1.TabIndex = 2;
+            cmbJugadores.FormattingEnabled = true;
+            cmbJugadores.Location = new Point(77, 302);
+            cmbJugadores.Name = "cmbJugadores";
+            cmbJugadores.Size = new Size(199, 23);
+            cmbJugadores.TabIndex = 2;
+            cmbJugadores.SelectedIndexChanged += cmbJugadores_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -82,6 +85,7 @@
             btnAgregar.TabIndex = 4;
             btnAgregar.Text = "Agregar al Inventario";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnVolver
             // 
@@ -103,34 +107,46 @@
             label2.TabIndex = 6;
             label2.Text = "Criaturas disponibles";
             // 
+            // lblCristales
+            // 
+            lblCristales.AutoSize = true;
+            lblCristales.Location = new Point(351, 305);
+            lblCristales.Name = "lblCristales";
+            lblCristales.Size = new Size(57, 15);
+            lblCristales.TabIndex = 7;
+            lblCristales.Text = "Cristales: ";
+            // 
             // frmInventarioCriaturasJugador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
+            Controls.Add(lblCristales);
             Controls.Add(label2);
             Controls.Add(btnVolver);
             Controls.Add(btnAgregar);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(cmbJugadores);
+            Controls.Add(dgvCriaturasAdquiridas);
+            Controls.Add(dgvCriaturas);
             Name = "frmInventarioCriaturasJugador";
             Text = "Agregar Criaturas al Inventario";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            Load += frmInventarioCriaturasJugador_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCriaturas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCriaturasAdquiridas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
-        private ComboBox comboBox1;
+        private DataGridView dgvCriaturas;
+        private DataGridView dgvCriaturasAdquiridas;
+        private ComboBox cmbJugadores;
         private Label label1;
         private Button btnAgregar;
         private Button btnVolver;
         private Label label2;
+        private Label lblCristales;
     }
 }

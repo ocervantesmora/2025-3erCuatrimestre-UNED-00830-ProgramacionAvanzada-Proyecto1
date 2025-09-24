@@ -43,5 +43,10 @@ namespace Entidades
             InventarioCriaturas = new Inventario[30];
             CantidadCriaturas = 0;
         }
+
+        public override string ToString()
+        {
+            return this.IdJugador + " - " + this.Nombre;
+        }
     }
 }

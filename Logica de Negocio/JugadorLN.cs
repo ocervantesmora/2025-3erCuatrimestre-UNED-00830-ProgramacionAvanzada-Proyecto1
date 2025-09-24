@@ -110,7 +110,12 @@ namespace Logica_de_Negocio
                 return "Error: No se encontró la criatura.";
             }
 
-            
+            if (CriaturaYaEstaEnInventario(jugador, pIdCriatura))
+            {
+                return "Error: La criatura ya se encuentra en el inventario del jugador.";
+            }
+
+
             if (jugador.Cristales < criatura.Costo)
             {
                 return "Error: El jugador no tiene suficientes cristales para agregar esta criatura.";
@@ -121,6 +126,19 @@ namespace Logica_de_Negocio
             jugador.Cristales -= criatura.Costo;
 
             return JugadorAD.AgregarCriaturaAInventario(pIdJugador, nuevoInventario);
+        }
+
+        public bool CriaturaYaEstaEnInventario(Jugador pJugador, int pIdCriatura)
+        {
+
+            foreach (var criaturaInventario in pJugador.InventarioCriaturas)
+            {
+                if (criaturaInventario != null && criaturaInventario.IdCriatura == pIdCriatura)
+                {
+                    return true; // La criatura ya existe en el inventario
+                }
+            }
+            return false; // La criatura no se encontró
         }
 
     }
