@@ -41,8 +41,7 @@ namespace LogicaDeNegocio
 
         private bool ValidarNivel(int pNivel)
         {
-            if (pNivel > 0 && pNivel <= 5) return true;
-            else return false;
+            return (pNivel > 0 && pNivel <= 5);
         }
 
         private bool ValidarCostoSegunNivel(int pNivel, int pCosto)

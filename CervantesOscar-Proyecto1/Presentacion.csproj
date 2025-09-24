@@ -14,4 +14,10 @@
     <ProjectReference Include="..\Logica de Negocio\LogicaDeNegocio.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="frmRegistrarJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

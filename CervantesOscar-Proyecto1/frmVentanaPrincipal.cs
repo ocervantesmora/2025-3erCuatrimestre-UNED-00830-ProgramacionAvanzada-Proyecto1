@@ -11,8 +11,17 @@ namespace CervantesOscar_Proyecto1
         {
             this.Hide();
             frmRegistrarCriatura frmRegistrarCriatura = new frmRegistrarCriatura();
-            frmRegistrarCriatura.Show();
-            
+            frmRegistrarCriatura.ShowDialog();
+            this.Show();
+
+        }
+
+        private void btnRegistrarJugador_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegistrarJugador frmRegistrarJugador = new frmRegistrarJugador();
+            frmRegistrarJugador.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -22,9 +22,7 @@ namespace CervantesOscar_Proyecto1
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmVentanaPrincipal frmVentanaPrincipal = new frmVentanaPrincipal();
-            frmVentanaPrincipal.Show();
+            this.Close();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -74,6 +72,8 @@ namespace CervantesOscar_Proyecto1
         {
             Criatura[] criaturas = criaturaLN.ObtenerTodasLasCriaturas();
             dgvCriaturas.DataSource = criaturas;
+            dgvCriaturas.Columns["Nivel"].Visible = false;
+            dgvCriaturas.Columns["NivelTexto"].HeaderText = "Nivel";
             dgvCriaturas.Refresh();
         }
 

@@ -23,3 +23,4 @@ C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyect
 C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\CervantesOscar-Proyecto1\bin\Debug\net6.0-windows\AccesoADatos.pdb
 C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\CervantesOscar-Proyecto1\obj\Debug\net6.0-windows\Presentacion.csproj.AssemblyReference.cache
 C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\CervantesOscar-Proyecto1\obj\Debug\net6.0-windows\Presentacion.csproj.CopyComplete
+C:\Users\ocerv\Dropbox\UNED\00830 - Programacion avanzada\CervantesOscar-Proyecto1\CervantesOscar-Proyecto1\obj\Debug\net6.0-windows\CervantesOscar_Proyecto1.frmRegistrarJugador.resources

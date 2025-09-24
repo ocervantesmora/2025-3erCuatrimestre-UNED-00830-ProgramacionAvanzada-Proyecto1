@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnRegistrarCriaturas = new Button();
+            btnRegistrarJugador = new Button();
             SuspendLayout();
             // 
             // btnRegistrarCriaturas
@@ -41,11 +42,22 @@
             btnRegistrarCriaturas.UseVisualStyleBackColor = true;
             btnRegistrarCriaturas.Click += btnRegistrarCriaturas_Click;
             // 
+            // btnRegistrarJugador
+            // 
+            btnRegistrarJugador.Location = new Point(142, 151);
+            btnRegistrarJugador.Name = "btnRegistrarJugador";
+            btnRegistrarJugador.Size = new Size(192, 50);
+            btnRegistrarJugador.TabIndex = 1;
+            btnRegistrarJugador.Text = "Registrar Jugador";
+            btnRegistrarJugador.UseVisualStyleBackColor = true;
+            btnRegistrarJugador.Click += btnRegistrarJugador_Click;
+            // 
             // frmVentanaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnRegistrarJugador);
             Controls.Add(btnRegistrarCriaturas);
             Name = "frmVentanaPrincipal";
             Text = "Form1";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button btnRegistrarCriaturas;
+        private Button btnRegistrarJugador;
     }
 }
