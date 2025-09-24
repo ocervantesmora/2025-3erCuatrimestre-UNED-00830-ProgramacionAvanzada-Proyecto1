@@ -38,5 +38,17 @@ namespace AccesoADatos
             return false;
         }
 
+        public Criatura BuscarCriaturaPorId(int pId)
+        {
+            foreach (Criatura criatura in arregloCriaturas)
+            {
+                if (criatura != null && criatura.IdCriatura == pId)
+                {
+                    return criatura;
+                }
+            }
+            return null;
+        }
+
     }
 }

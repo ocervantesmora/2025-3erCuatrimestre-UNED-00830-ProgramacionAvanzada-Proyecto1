@@ -1,5 +1,6 @@
 ﻿using AccesoADatos;
 using Entidades;
+using LogicaDeNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace Logica_de_Negocio
     public class JugadorLN
     {
         private JugadorAD jugadorAD;
+        private CriaturaLN criaturaLN;
 
         public JugadorLN()
         {
             jugadorAD = new JugadorAD();
+            criaturaLN = new CriaturaLN();
         }
 
         public string RegistrarJugador(int pId, string pNombre, DateTime pFechaNacimiento)
@@ -89,6 +92,35 @@ namespace Logica_de_Negocio
             if (batallasGanadas >= 5) return 2;
             return 1;
         }
-        
+
+        public string AgregarCriaturaAInventario(int pIdJugador, int pIdCriatura, int pPoder, int pResistencia)
+        {
+            
+            Jugador jugador = jugadorAD.BuscarJugadorPorId(pIdJugador);
+            Criatura criatura = criaturaLN.BuscarCriaturaPorId(pIdCriatura);
+
+            if (jugador == null)
+            {
+                return "Error: No se encontró el jugador.";
+            }
+
+            if (criatura == null)
+            {
+                return "Error: No se encontró la criatura.";
+            }
+
+            
+            if (jugador.Cristales < criatura.Costo)
+            {
+                return "Error: El jugador no tiene suficientes cristales para agregar esta criatura.";
+            }
+
+            Inventario nuevoInventario = new Inventario(pIdJugador, pIdCriatura, pPoder, pResistencia);
+
+            jugador.Cristales -= criatura.Costo;
+
+            return jugadorAD.AgregarCriaturaAInventario(pIdJugador, nuevoInventario);
+        }
+
     }
 }

@@ -28,6 +28,8 @@ namespace Entidades
                 }
             }
         }
+        public Inventario[] InventarioCriaturas { get; set; }
+        public int CantidadCriaturas { get; set; }
 
         public Jugador(int pId, string pNombre, DateTime pFechaNacimiento)
         {
@@ -37,6 +39,9 @@ namespace Entidades
             Nivel = 1;
             Cristales = 100;
             BatallasGanadas = 0;
+
+            InventarioCriaturas = new Inventario[30];
+            CantidadCriaturas = 0;
         }
     }
 }

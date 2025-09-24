@@ -60,5 +60,26 @@ namespace AccesoADatos
             }
             return null;
         }
+
+        public string AgregarCriaturaAInventario(int pIdJugador, Inventario pCriaturaEnInventario)
+        {
+            Jugador jugador = BuscarJugadorPorId(pIdJugador);
+
+            if (jugador == null)
+            {
+                return "Error: No se encontró el jugador con el ID especificado.";
+            }
+
+            if (jugador.CantidadCriaturas >= jugador.InventarioCriaturas.Length)
+            {
+                return "Error: El inventario del jugador está lleno.";
+            }
+
+            // Agregar la criatura al inventario del jugador
+            jugador.InventarioCriaturas[jugador.CantidadCriaturas] = pCriaturaEnInventario;
+            jugador.CantidadCriaturas++;
+
+            return "Criatura agregada al inventario con éxito.";
+        }
     }
 }

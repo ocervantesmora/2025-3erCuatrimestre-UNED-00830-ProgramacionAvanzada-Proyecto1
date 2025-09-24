@@ -67,5 +67,10 @@ namespace LogicaDeNegocio
         {
             return criaturaAD.ObtenerCriaturas();
         }
+
+        public Criatura BuscarCriaturaPorId(int pId)
+        {
+            return criaturaAD.BuscarCriaturaPorId(pId);
+        }
     }
 }
