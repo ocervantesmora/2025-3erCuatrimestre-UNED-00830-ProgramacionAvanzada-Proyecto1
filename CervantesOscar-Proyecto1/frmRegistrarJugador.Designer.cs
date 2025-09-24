@@ -53,6 +53,7 @@ namespace CervantesOscar_Proyecto1
             dgvJugadores.RowTemplate.Height = 25;
             dgvJugadores.Size = new Size(760, 201);
             dgvJugadores.TabIndex = 0;
+            dgvJugadores.CellFormatting += dgvJugadores_CellFormatting;
             // 
             // label1
             // 

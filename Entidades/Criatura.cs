@@ -19,7 +19,7 @@
                     case 2: return "02 - Aprendiz";
                     case 3: return "03 - Estudiante";
                     case 4: return "04 - Avanzado";
-                    case 4: return "05 - Maestro";
+                    case 5: return "05 - Maestro";
                     default: return "Desconocido";
                 }
             }

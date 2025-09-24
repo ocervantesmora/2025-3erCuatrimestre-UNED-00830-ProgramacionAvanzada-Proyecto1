@@ -2,18 +2,12 @@
 
 namespace AccesoADatos
 {
-    public class CriaturaAD
+    public static class CriaturaAD
     {
-        private Criatura[] arregloCriaturas;
-        private int indiceCriaturas;
+        private static Criatura[] arregloCriaturas = new Criatura[20];
+        private static int indiceCriaturas = 0;
 
-        public CriaturaAD()
-        {
-            arregloCriaturas = new Criatura[20];
-            indiceCriaturas = 0;
-        }
-
-        public bool RegistrarCriatura(Criatura pCriatura)
+        public static bool RegistrarCriatura(Criatura pCriatura)
         {
             if (indiceCriaturas < arregloCriaturas.Length)
             {
@@ -24,12 +18,12 @@ namespace AccesoADatos
             else return false;
         }
 
-        public Criatura[] ObtenerCriaturas()
+        public static Criatura[] ObtenerCriaturas()
         {
             return arregloCriaturas;
         }
 
-        public bool ExisteIDCriatura(int pId)
+        public static bool ExisteIDCriatura(int pId)
         {
             foreach (Criatura criatura in arregloCriaturas)
             {
@@ -38,7 +32,7 @@ namespace AccesoADatos
             return false;
         }
 
-        public Criatura BuscarCriaturaPorId(int pId)
+        public static Criatura BuscarCriaturaPorId(int pId)
         {
             foreach (Criatura criatura in arregloCriaturas)
             {

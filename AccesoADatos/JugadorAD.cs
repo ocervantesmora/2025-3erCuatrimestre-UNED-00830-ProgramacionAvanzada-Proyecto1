@@ -7,18 +7,12 @@ using System.Threading.Tasks;
 
 namespace AccesoADatos
 {
-    public class JugadorAD
+    public static class JugadorAD
     {
-        private Jugador[] arregloJugadores;
-        private int indiceJugadores;
+        private static Jugador[] arregloJugadores = new Jugador[20];
+        private static int indiceJugadores = 0;
 
-        public JugadorAD()
-        {
-            arregloJugadores = new Jugador[20];
-            indiceJugadores = 0;
-        }
-
-        public bool RegistrarJugador(Jugador pJugador)
+        public static bool RegistrarJugador(Jugador pJugador)
         {
             if (indiceJugadores < arregloJugadores.Length)
             {
@@ -32,12 +26,12 @@ namespace AccesoADatos
             }
         }
 
-        public Jugador[] ObtenerJugadores()
+        public static Jugador[] ObtenerJugadores()
         {
             return arregloJugadores;
         }
 
-        public bool ExisteIdJugador(int pId)
+        public static bool ExisteIdJugador(int pId)
         {
             foreach (Jugador jugador in arregloJugadores)
             {
@@ -49,7 +43,7 @@ namespace AccesoADatos
             return false;
         }
 
-        public Jugador BuscarJugadorPorId(int pId)
+        public static Jugador BuscarJugadorPorId(int pId)
         {
             foreach (Jugador jugador in arregloJugadores)
             {
@@ -61,7 +55,7 @@ namespace AccesoADatos
             return null;
         }
 
-        public string AgregarCriaturaAInventario(int pIdJugador, Inventario pCriaturaEnInventario)
+        public static string AgregarCriaturaAInventario(int pIdJugador, Inventario pCriaturaEnInventario)
         {
             Jugador jugador = BuscarJugadorPorId(pIdJugador);
 

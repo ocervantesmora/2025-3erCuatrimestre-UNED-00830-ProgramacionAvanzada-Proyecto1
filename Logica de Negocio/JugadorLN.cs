@@ -11,21 +11,22 @@ namespace Logica_de_Negocio
 {
     public class JugadorLN
     {
-        private JugadorAD jugadorAD;
         private CriaturaLN criaturaLN;
-
         public JugadorLN()
         {
-            jugadorAD = new JugadorAD();
             criaturaLN = new CriaturaLN();
         }
-
         public string RegistrarJugador(int pId, string pNombre, DateTime pFechaNacimiento)
         {
             // Validar que el ID del jugador no exista ya
-            if (jugadorAD.ExisteIdJugador(pId))
+            if (JugadorAD.ExisteIdJugador(pId))
             {
                 return "Error: Ya existe un jugador registrado con este ID.";
+            }
+
+            if (string.IsNullOrEmpty(pNombre))
+            {
+                return "Error: El nombre del jugador no puede estar vacío.";
             }
 
             if (!ValidarEdad(pFechaNacimiento))
@@ -39,7 +40,7 @@ namespace Logica_de_Negocio
             Jugador nuevoJugador = new Jugador(pId, pNombre, pFechaNacimiento);
 
             // Registrar el jugador en la capa de Acceso a Datos
-            if (jugadorAD.RegistrarJugador(nuevoJugador))
+            if (JugadorAD.RegistrarJugador(nuevoJugador))
             {
                 return "Jugador registrado con éxito.";
             }
@@ -66,12 +67,12 @@ namespace Logica_de_Negocio
 
         public Jugador[] ObtenerTodosLosJugadores()
         {
-            return jugadorAD.ObtenerJugadores();
+            return JugadorAD.ObtenerJugadores();
         }
 
         public string ActualizarBatallasGanadas(int pId, int pBatallasGanadas)
         {
-            Jugador jugador = jugadorAD.BuscarJugadorPorId(pId);
+            Jugador jugador = JugadorAD.BuscarJugadorPorId(pId);
             if (jugador != null)
             {
                 jugador.BatallasGanadas = pBatallasGanadas;
@@ -96,7 +97,7 @@ namespace Logica_de_Negocio
         public string AgregarCriaturaAInventario(int pIdJugador, int pIdCriatura, int pPoder, int pResistencia)
         {
             
-            Jugador jugador = jugadorAD.BuscarJugadorPorId(pIdJugador);
+            Jugador jugador = JugadorAD.BuscarJugadorPorId(pIdJugador);
             Criatura criatura = criaturaLN.BuscarCriaturaPorId(pIdCriatura);
 
             if (jugador == null)
@@ -119,7 +120,7 @@ namespace Logica_de_Negocio
 
             jugador.Cristales -= criatura.Costo;
 
-            return jugadorAD.AgregarCriaturaAInventario(pIdJugador, nuevoInventario);
+            return JugadorAD.AgregarCriaturaAInventario(pIdJugador, nuevoInventario);
         }
 
     }

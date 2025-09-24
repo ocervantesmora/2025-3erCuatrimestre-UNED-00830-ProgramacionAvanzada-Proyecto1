@@ -5,16 +5,9 @@ namespace LogicaDeNegocio
 {
     public class CriaturaLN
     {
-        private CriaturaAD criaturaAD;
-
-        public CriaturaLN()
-        {
-            criaturaAD = new CriaturaAD();
-        }
-
         public string RegistrarCriatura(int pId, string pNombre, string pTipo, int pNivel, int pPoder, int pResistencia, int pCosto)
         {
-            if (criaturaAD.ExisteIDCriatura(pId))
+            if (CriaturaAD.ExisteIDCriatura(pId))
             {
                 return "Error: Ya existe una criatura registrada con este ID.";
             }
@@ -31,7 +24,7 @@ namespace LogicaDeNegocio
 
             Criatura nuevaCriatura = new Criatura(pId, pNombre, pTipo, pNivel, pPoder, pResistencia, pCosto);
 
-            if (criaturaAD.RegistrarCriatura(nuevaCriatura))
+            if (CriaturaAD.RegistrarCriatura(nuevaCriatura))
             {
                 return "Criatura registrada con éxito.";
             }
@@ -65,12 +58,12 @@ namespace LogicaDeNegocio
 
         public Criatura[] ObtenerTodasLasCriaturas()
         {
-            return criaturaAD.ObtenerCriaturas();
+            return CriaturaAD.ObtenerCriaturas();
         }
 
         public Criatura BuscarCriaturaPorId(int pId)
         {
-            return criaturaAD.BuscarCriaturaPorId(pId);
+            return CriaturaAD.BuscarCriaturaPorId(pId);
         }
     }
 }

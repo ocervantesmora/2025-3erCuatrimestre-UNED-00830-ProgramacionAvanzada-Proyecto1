@@ -35,7 +35,12 @@ namespace CervantesOscar_Proyecto1
                 DateTime fechaNacimiento = dtpFechaNacimiento.Value;
 
                 string resultado = jugadorLN.RegistrarJugador(id, nombre, fechaNacimiento);
-                MessageBox.Show(resultado, "Registro de Criatura", MessageBoxButtons.OK);
+                if(resultado == "Jugador registrado con éxito.")
+                {
+                    txtId.Clear();
+                    txtNombre.Clear();
+                }
+                MessageBox.Show(resultado, "Registro de Jugador", MessageBoxButtons.OK);
             }
             catch (FormatException)
             {
@@ -58,6 +63,21 @@ namespace CervantesOscar_Proyecto1
         private void frmRegistrarCriatura_Load(object sender, EventArgs e)
         {
             CargarJugadoressEnTabla();
+        }
+
+        private void dgvJugadores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvJugadores.Columns[e.ColumnIndex].Name == "FechaNacimiento")
+            {
+                if (e.Value != null)
+                {
+                    if (e.Value is DateTime fecha)
+                    {
+                        e.Value = fecha.ToShortDateString();
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
         }
     }
 }
