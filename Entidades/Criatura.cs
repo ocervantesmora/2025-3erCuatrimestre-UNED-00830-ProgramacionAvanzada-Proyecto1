@@ -36,5 +36,10 @@
             Resistencia = pResistencia;
             Costo = pCosto;
         }
+
+        public override string ToString()
+        {
+            return $"{IdCriatura} - {Nombre}";
+        }
     }
 }

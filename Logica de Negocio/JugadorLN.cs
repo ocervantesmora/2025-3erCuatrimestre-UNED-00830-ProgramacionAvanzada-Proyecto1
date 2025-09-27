@@ -115,7 +115,6 @@ namespace Logica_de_Negocio
                 return "Error: La criatura ya se encuentra en el inventario del jugador.";
             }
 
-
             if (jugador.Cristales < criatura.Costo)
             {
                 return "Error: El jugador no tiene suficientes cristales para agregar esta criatura.";
