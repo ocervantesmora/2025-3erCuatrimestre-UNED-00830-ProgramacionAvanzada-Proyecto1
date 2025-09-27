@@ -75,5 +75,15 @@ namespace AccesoADatos
 
             return "Criatura agregada al inventario con éxito.";
         }
+
+        public static void IncrementarBatallasGanadas(int pIdJugadorGanador)
+        {
+            Jugador jugadorGanador = BuscarJugadorPorId(pIdJugadorGanador);
+
+            if (jugadorGanador != null)
+            {
+                jugadorGanador.BatallasGanadas++;
+            }
+        }
     }
 }

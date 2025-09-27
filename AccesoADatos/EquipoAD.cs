@@ -39,5 +39,17 @@ namespace AccesoADatos
         {
             return arregloEquipos;
         }
+
+        public static Equipo BuscarEquipoPorIdYJugador(int pIdEquipo, int pIdJugador)
+        {
+            foreach (Equipo equipo in arregloEquipos)
+            {
+                if (equipo != null && equipo.IdEquipo == pIdEquipo && equipo.IdJugador == pIdJugador)
+                {
+                    return equipo; // Equipo encontrado y pertenece al jugador
+                }
+            }
+            return null;
+        }
     }
 }

@@ -65,5 +65,11 @@ namespace Logica_de_Negocio
         {
             return EquipoAD.BuscarTodosLosEquipos();
         }
+
+        public Equipo BuscarEquipoPorIdYJugador(int pIdEquipo, int pIdJugador)
+        {
+            // Delega la búsqueda a la capa de Acceso a Datos
+            return EquipoAD.BuscarEquipoPorIdYJugador(pIdEquipo, pIdJugador);
+        }
     }
 }
