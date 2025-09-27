@@ -140,5 +140,11 @@ namespace Logica_de_Negocio
             return false; // La criatura no se encontró
         }
 
+        public Jugador BuscarJugadorPorId(int pIdJugador)
+        {
+            // Se llama directamente al método estático en la capa AD
+            return JugadorAD.BuscarJugadorPorId(pIdJugador);
+        }
+
     }
 }

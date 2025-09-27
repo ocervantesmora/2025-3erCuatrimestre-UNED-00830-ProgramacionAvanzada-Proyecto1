@@ -72,6 +72,7 @@
             dgvEquipos.RowTemplate.Height = 25;
             dgvEquipos.Size = new Size(760, 218);
             dgvEquipos.TabIndex = 2;
+            dgvEquipos.CellFormatting += dgvEquipos_CellFormatting;
             // 
             // dgvInventario
             // 
@@ -160,6 +161,7 @@
             btnRegistrar.TabIndex = 12;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnVolver
             // 

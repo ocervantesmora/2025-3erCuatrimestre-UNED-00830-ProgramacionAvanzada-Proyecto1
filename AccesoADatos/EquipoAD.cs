@@ -34,5 +34,10 @@ namespace AccesoADatos
             }
             return false;
         }
+
+        public static Equipo[] BuscarTodosLosEquipos()
+        {
+            return arregloEquipos;
+        }
     }
 }

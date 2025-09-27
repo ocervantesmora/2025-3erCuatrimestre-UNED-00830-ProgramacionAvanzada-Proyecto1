@@ -51,7 +51,6 @@ namespace Logica_de_Negocio
 
         private bool CriaturaPerteneceAInventario(Jugador pJugador, int pIdCriatura)
         {
-            // Recorre el arreglo de inventario del jugador
             foreach (var inventarioItem in pJugador.InventarioCriaturas)
             {
                 if (inventarioItem != null && inventarioItem.IdCriatura == pIdCriatura)
@@ -60,6 +59,11 @@ namespace Logica_de_Negocio
                 }
             }
             return false;
+        }
+
+        public Equipo[] ObtenerTodosLosEquipos()
+        {
+            return EquipoAD.BuscarTodosLosEquipos();
         }
     }
 }
