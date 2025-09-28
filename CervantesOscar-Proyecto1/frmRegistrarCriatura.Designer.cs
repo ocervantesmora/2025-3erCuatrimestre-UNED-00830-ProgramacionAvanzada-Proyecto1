@@ -233,6 +233,7 @@ namespace CervantesOscar_Proyecto1
             Controls.Add(label1);
             Controls.Add(dgvCriaturas);
             Name = "frmRegistrarCriatura";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Criaturas";
             Load += frmRegistrarCriatura_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCriaturas).EndInit();

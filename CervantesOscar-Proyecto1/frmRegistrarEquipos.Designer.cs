@@ -193,6 +193,7 @@
             Controls.Add(label1);
             Controls.Add(cmbJugador);
             Name = "frmRegistrarEquipos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Equipos";
             Load += frmRegistrarEquipos_Load;
             ((System.ComponentModel.ISupportInitialize)dgvEquipos).EndInit();

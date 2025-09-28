@@ -51,5 +51,28 @@ namespace AccesoADatos
             }
             return null;
         }
+
+        public static Equipo[] BuscarEquiposPorJugador(int pIdJugador)
+        {
+            int contador = 0;
+            foreach (Equipo equipo in arregloEquipos)
+            {
+                if (equipo != null && equipo.IdJugador == pIdJugador)
+                {
+                    contador++;
+                }
+            }
+            Equipo[] equiposDelJugador = new Equipo[contador];
+            int indiceNuevoArreglo = 0;
+            foreach (Equipo equipo in arregloEquipos)
+            {
+                if (equipo != null && equipo.IdJugador == pIdJugador)
+                {
+                    equiposDelJugador[indiceNuevoArreglo] = equipo;
+                    indiceNuevoArreglo++;
+                }
+            }
+            return equiposDelJugador;
+        }
     }
 }

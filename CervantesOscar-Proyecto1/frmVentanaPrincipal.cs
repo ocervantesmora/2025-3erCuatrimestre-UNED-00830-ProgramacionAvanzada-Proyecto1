@@ -39,5 +39,13 @@ namespace CervantesOscar_Proyecto1
             frmRegistrarEquipos.ShowDialog();
             this.Show();
         }
+
+        private void btnRegistrarBatallas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegistrarBatallas frmRegistrarBatallas = new frmRegistrarBatallas();
+            frmRegistrarBatallas.ShowDialog();
+            this.Show();
+        }
     }
 }

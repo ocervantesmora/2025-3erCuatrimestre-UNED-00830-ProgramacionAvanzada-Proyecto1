@@ -32,6 +32,7 @@
             btnRegistrarJugador = new Button();
             button1 = new Button();
             button2 = new Button();
+            btnRegistrarBatallas = new Button();
             SuspendLayout();
             // 
             // btnRegistrarCriaturas
@@ -74,16 +75,28 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // btnRegistrarBatallas
+            // 
+            btnRegistrarBatallas.Location = new Point(373, 69);
+            btnRegistrarBatallas.Name = "btnRegistrarBatallas";
+            btnRegistrarBatallas.Size = new Size(192, 50);
+            btnRegistrarBatallas.TabIndex = 4;
+            btnRegistrarBatallas.Text = "Registrar Batallas";
+            btnRegistrarBatallas.UseVisualStyleBackColor = true;
+            btnRegistrarBatallas.Click += btnRegistrarBatallas_Click;
+            // 
             // frmVentanaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnRegistrarBatallas);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(btnRegistrarJugador);
             Controls.Add(btnRegistrarCriaturas);
             Name = "frmVentanaPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
         }
@@ -94,5 +107,6 @@
         private Button btnRegistrarJugador;
         private Button button1;
         private Button button2;
+        private Button btnRegistrarBatallas;
     }
 }

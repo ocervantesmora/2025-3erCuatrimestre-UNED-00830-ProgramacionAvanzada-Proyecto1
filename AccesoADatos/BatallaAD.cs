@@ -19,7 +19,7 @@ namespace AccesoADatos
                 arregloBatallas[indiceBatallas] = pBatalla;
                 indiceBatallas++;
 
-                JugadorAD.IncrementarBatallasGanadas(pBatalla.Ganador);
+                if (pBatalla.Ganador != 0) JugadorAD.IncrementarBatallasGanadas(pBatalla.Ganador);
                 return true;
             }
             return false;

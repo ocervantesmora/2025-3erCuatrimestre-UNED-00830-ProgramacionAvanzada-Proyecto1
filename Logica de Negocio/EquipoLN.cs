@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logica_de_Negocio
+namespace LogicaDeNegocio
 {
     public class EquipoLN
     {
@@ -70,6 +70,11 @@ namespace Logica_de_Negocio
         {
             // Delega la búsqueda a la capa de Acceso a Datos
             return EquipoAD.BuscarEquipoPorIdYJugador(pIdEquipo, pIdJugador);
+        }
+
+        public Equipo[] ObtenerEquiposPorIdJugador(int pIdJugador)
+        {
+            return EquipoAD.BuscarEquiposPorJugador(pIdJugador);
         }
     }
 }

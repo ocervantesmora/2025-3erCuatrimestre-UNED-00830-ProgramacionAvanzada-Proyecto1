@@ -4,6 +4,9 @@
     <Compile Update="frmInventarioCriaturasJugador.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmRegistrarBatallas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmRegistrarCriatura.cs">
       <SubType>Form</SubType>
     </Compile>

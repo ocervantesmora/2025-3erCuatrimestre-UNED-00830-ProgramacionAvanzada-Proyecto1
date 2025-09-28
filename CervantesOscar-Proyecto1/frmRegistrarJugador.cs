@@ -1,5 +1,5 @@
 ﻿using Entidades;
-using Logica_de_Negocio;
+using LogicaDeNegocio;
 using LogicaDeNegocio;
 using System;
 using System.Collections.Generic;
@@ -35,7 +35,7 @@ namespace CervantesOscar_Proyecto1
                 DateTime fechaNacimiento = dtpFechaNacimiento.Value;
 
                 string resultado = jugadorLN.RegistrarJugador(id, nombre, fechaNacimiento);
-                if(resultado == "Jugador registrado con éxito.")
+                if (resultado == "Jugador registrado con éxito.")
                 {
                     txtId.Clear();
                     txtNombre.Clear();

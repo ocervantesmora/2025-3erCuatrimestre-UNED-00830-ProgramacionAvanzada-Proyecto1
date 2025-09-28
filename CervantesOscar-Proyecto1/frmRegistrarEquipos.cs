@@ -1,7 +1,7 @@
 ﻿using AccesoADatos;
 using Entidades;
 using Entidades.Entidades;
-using Logica_de_Negocio;
+using LogicaDeNegocio;
 using LogicaDeNegocio;
 using System;
 using System.Collections.Generic;
@@ -30,7 +30,7 @@ namespace CervantesOscar_Proyecto1
         {
             this.Close();
         }
-        
+
         private void frmRegistrarEquipos_Load(object sender, EventArgs e)
         {
             CargarJugadoresEnComboBox();

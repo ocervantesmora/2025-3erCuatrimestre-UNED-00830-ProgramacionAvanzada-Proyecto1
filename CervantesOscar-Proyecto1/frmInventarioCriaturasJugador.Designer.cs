@@ -130,6 +130,7 @@
             Controls.Add(dgvCriaturasAdquiridas);
             Controls.Add(dgvCriaturas);
             Name = "frmInventarioCriaturasJugador";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar Criaturas al Inventario";
             Load += frmInventarioCriaturasJugador_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCriaturas).EndInit();

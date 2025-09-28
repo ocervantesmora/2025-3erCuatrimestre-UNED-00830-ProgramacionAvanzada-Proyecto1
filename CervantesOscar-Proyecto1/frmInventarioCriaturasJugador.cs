@@ -1,5 +1,5 @@
 ﻿using Entidades;
-using Logica_de_Negocio;
+using LogicaDeNegocio;
 using LogicaDeNegocio;
 using System;
 using System.Collections.Generic;

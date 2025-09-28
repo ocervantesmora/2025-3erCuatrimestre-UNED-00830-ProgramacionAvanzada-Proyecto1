@@ -162,6 +162,7 @@ namespace CervantesOscar_Proyecto1
             Controls.Add(label1);
             Controls.Add(dgvJugadores);
             Name = "frmRegistrarJugador";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Jugadores";
             Load += frmRegistrarCriatura_Load;
             ((System.ComponentModel.ISupportInitialize)dgvJugadores).EndInit();
