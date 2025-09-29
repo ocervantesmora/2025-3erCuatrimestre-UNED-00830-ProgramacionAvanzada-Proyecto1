@@ -1,18 +1,15 @@
-﻿using AccesoADatos;
+﻿/*
+ * UNED III Cuatrimestre
+ * 00830 - Programacion avanzada
+ * Proyecto 1: Batallas Místicas
+ * Estudiante: Oscar Eduardo Cervantes Mora
+ * Fecha: 2025-09-28
+ * @author ocervantesmora
+ */
+using AccesoADatos;
 using Entidades;
-using Entidades.Entidades;
 using LogicaDeNegocio;
-using LogicaDeNegocio;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace CervantesOscar_Proyecto1
 {
@@ -109,25 +106,17 @@ namespace CervantesOscar_Proyecto1
 
         private void FormatearDgvInventario()
         {
-            if (dgvInventario.Columns.Contains("IdJugador"))
-            {
-                dgvInventario.Columns["IdJugador"].Visible = false;
-            }
+            if (dgvInventario.Columns.Contains("IdJugador")) dgvInventario.Columns["IdJugador"].Visible = false;
+
             if (dgvInventario.Columns.Contains("IdCriatura"))
             {
                 dgvInventario.Columns["IdCriatura"].Visible = true;
                 dgvInventario.Columns["IdCriatura"].HeaderText = "ID";
             }
 
-            if (!dgvInventario.Columns.Contains("NombreCriatura"))
-            {
-                dgvInventario.Columns.Add("NombreCriatura", "Criatura");
-            }
+            if (!dgvInventario.Columns.Contains("NombreCriatura"))  dgvInventario.Columns.Add("NombreCriatura", "Criatura");
 
-            if (!dgvInventario.Columns.Contains("NivelCriatura"))
-            {
-                dgvInventario.Columns.Add("NivelCriatura", "Nivel");
-            }
+            if (!dgvInventario.Columns.Contains("NivelCriatura"))  dgvInventario.Columns.Add("NivelCriatura", "Nivel");
 
             dgvInventario.Columns["IdCriatura"].DisplayIndex = 0;
             dgvInventario.Columns["NombreCriatura"].DisplayIndex = 1;
@@ -140,16 +129,18 @@ namespace CervantesOscar_Proyecto1
         {
             pComboBox.Items.Clear();
 
-            var inventarioFiltrado = pJugador.InventarioCriaturas
-                                             .Where(i => i != null);
+            Inventario[] inventario = pJugador.InventarioCriaturas;
 
-            foreach (var inventarioItem in inventarioFiltrado)
+            foreach (var inventarioItem in inventario)
             {
-                Criatura criatura = criaturaLN.BuscarCriaturaPorId(inventarioItem.IdCriatura);
-
-                if (criatura != null)
+                if (inventarioItem != null)
                 {
-                    pComboBox.Items.Add(criatura);
+                    Criatura criatura = criaturaLN.BuscarCriaturaPorId(inventarioItem.IdCriatura);
+
+                    if (criatura != null)
+                    {
+                        pComboBox.Items.Add(criatura);
+                    }
                 }
             }
         }
@@ -225,29 +216,33 @@ namespace CervantesOscar_Proyecto1
         {
             Equipo[] equipos = equipoLN.ObtenerTodosLosEquipos();
 
-            dgvEquipos.DataSource = equipos.Where(e => e != null).ToArray();
+            int contador = 0;
+            foreach (Equipo e in equipos)
+            {
+                if (e != null) contador++;
+            }
 
+            Equipo[] equiposFiltrados = new Equipo[contador];
+            int indice = 0;
+
+            foreach (Equipo e in equipos)
+            {
+                if (e != null)
+                {
+                    equiposFiltrados[indice] = e;
+                    indice++;
+                }
+            }
+            dgvEquipos.DataSource = equiposFiltrados;
             FormatearDgvEquipos();
         }
 
         private void FormatearDgvEquipos()
         {
-            if (dgvEquipos.Columns.Contains("IdJugador"))
-            {
-                dgvEquipos.Columns["IdJugador"].Visible = false;
-            }
-            if (dgvEquipos.Columns.Contains("IdCriatura1"))
-            {
-                dgvEquipos.Columns["IdCriatura1"].Visible = false;
-            }
-            if (dgvEquipos.Columns.Contains("IdCriatura2"))
-            {
-                dgvEquipos.Columns["IdCriatura2"].Visible = false;
-            }
-            if (dgvEquipos.Columns.Contains("IdCriatura3"))
-            {
-                dgvEquipos.Columns["IdCriatura3"].Visible = false;
-            }
+            if (dgvEquipos.Columns.Contains("IdJugador")) dgvEquipos.Columns["IdJugador"].Visible = false;
+            if (dgvEquipos.Columns.Contains("IdCriatura1")) dgvEquipos.Columns["IdCriatura1"].Visible = false;
+            if (dgvEquipos.Columns.Contains("IdCriatura2")) dgvEquipos.Columns["IdCriatura2"].Visible = false;
+            if (dgvEquipos.Columns.Contains("IdCriatura3"))  dgvEquipos.Columns["IdCriatura3"].Visible = false;
 
             if (dgvEquipos.Columns.Contains("IdEquipo"))
             {
@@ -255,25 +250,11 @@ namespace CervantesOscar_Proyecto1
                 dgvEquipos.Columns["IdEquipo"].DisplayIndex = 0;
             }
 
-            if (!dgvEquipos.Columns.Contains("NombreJugador"))
-            {
-                dgvEquipos.Columns.Add("NombreJugador", "Jugador");
-            }
+            if (!dgvEquipos.Columns.Contains("NombreJugador")) dgvEquipos.Columns.Add("NombreJugador", "Jugador");
+            if (!dgvEquipos.Columns.Contains("CriaturaDetalle1")) dgvEquipos.Columns.Add("CriaturaDetalle1", "Criatura 1");
 
-            if (!dgvEquipos.Columns.Contains("CriaturaDetalle1"))
-            {
-                dgvEquipos.Columns.Add("CriaturaDetalle1", "Criatura 1");
-            }
-
-            if (!dgvEquipos.Columns.Contains("CriaturaDetalle2"))
-            {
-                dgvEquipos.Columns.Add("CriaturaDetalle2", "Criatura 2");
-            }
-
-            if (!dgvEquipos.Columns.Contains("CriaturaDetalle3"))
-            {
-                dgvEquipos.Columns.Add("CriaturaDetalle3", "Criatura 3");
-            }
+            if (!dgvEquipos.Columns.Contains("CriaturaDetalle2")) dgvEquipos.Columns.Add("CriaturaDetalle2", "Criatura 2");
+            if (!dgvEquipos.Columns.Contains("CriaturaDetalle3")) dgvEquipos.Columns.Add("CriaturaDetalle3", "Criatura 3");
 
             // Ajustar el orden
             dgvEquipos.Columns["NombreJugador"].DisplayIndex = 1;
@@ -302,18 +283,9 @@ namespace CervantesOscar_Proyecto1
                 {
                     int idCriatura = 0;
 
-                    if (dgvEquipos.Columns[e.ColumnIndex].Name == "CriaturaDetalle1")
-                    {
-                        idCriatura = equipoItem.IdCriatura1;
-                    }
-                    else if (dgvEquipos.Columns[e.ColumnIndex].Name == "CriaturaDetalle2")
-                    {
-                        idCriatura = equipoItem.IdCriatura2;
-                    }
-                    else if (dgvEquipos.Columns[e.ColumnIndex].Name == "CriaturaDetalle3")
-                    {
-                        idCriatura = equipoItem.IdCriatura3;
-                    }
+                    if (dgvEquipos.Columns[e.ColumnIndex].Name == "CriaturaDetalle1") idCriatura = equipoItem.IdCriatura1;
+                    else if (dgvEquipos.Columns[e.ColumnIndex].Name == "CriaturaDetalle2")  idCriatura = equipoItem.IdCriatura2;
+                    else if (dgvEquipos.Columns[e.ColumnIndex].Name == "CriaturaDetalle3")  idCriatura = equipoItem.IdCriatura3;
 
                     Criatura criatura = criaturaLN.BuscarCriaturaPorId(idCriatura);
                     if (criatura != null)

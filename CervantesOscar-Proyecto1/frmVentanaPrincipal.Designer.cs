@@ -30,74 +30,98 @@
         {
             btnRegistrarCriaturas = new Button();
             btnRegistrarJugador = new Button();
+            btnInventario = new Button();
+            btnEquipos = new Button();
+            btnBatallas = new Button();
+            btnSalir = new Button();
             button1 = new Button();
-            button2 = new Button();
-            btnRegistrarBatallas = new Button();
             SuspendLayout();
             // 
             // btnRegistrarCriaturas
             // 
-            btnRegistrarCriaturas.Location = new Point(142, 69);
+            btnRegistrarCriaturas.Location = new Point(12, 84);
             btnRegistrarCriaturas.Name = "btnRegistrarCriaturas";
-            btnRegistrarCriaturas.Size = new Size(192, 50);
+            btnRegistrarCriaturas.Size = new Size(309, 66);
             btnRegistrarCriaturas.TabIndex = 0;
-            btnRegistrarCriaturas.Text = "Registrar Criatura";
+            btnRegistrarCriaturas.Text = "Criaturas";
             btnRegistrarCriaturas.UseVisualStyleBackColor = true;
             btnRegistrarCriaturas.Click += btnRegistrarCriaturas_Click;
             // 
             // btnRegistrarJugador
             // 
-            btnRegistrarJugador.Location = new Point(142, 151);
+            btnRegistrarJugador.Location = new Point(12, 12);
             btnRegistrarJugador.Name = "btnRegistrarJugador";
-            btnRegistrarJugador.Size = new Size(192, 50);
+            btnRegistrarJugador.Size = new Size(309, 66);
             btnRegistrarJugador.TabIndex = 1;
-            btnRegistrarJugador.Text = "Registrar Jugador";
+            btnRegistrarJugador.Text = "Jugadores";
             btnRegistrarJugador.UseVisualStyleBackColor = true;
             btnRegistrarJugador.Click += btnRegistrarJugador_Click;
             // 
+            // btnInventario
+            // 
+            btnInventario.Location = new Point(12, 156);
+            btnInventario.Name = "btnInventario";
+            btnInventario.Size = new Size(309, 66);
+            btnInventario.TabIndex = 2;
+            btnInventario.Text = "Inventario";
+            btnInventario.UseVisualStyleBackColor = true;
+            btnInventario.Click += button1_Click;
+            // 
+            // btnEquipos
+            // 
+            btnEquipos.Location = new Point(12, 228);
+            btnEquipos.Name = "btnEquipos";
+            btnEquipos.Size = new Size(309, 66);
+            btnEquipos.TabIndex = 3;
+            btnEquipos.Text = "Equipos";
+            btnEquipos.UseVisualStyleBackColor = true;
+            btnEquipos.Click += button2_Click;
+            // 
+            // btnBatallas
+            // 
+            btnBatallas.Location = new Point(12, 300);
+            btnBatallas.Name = "btnBatallas";
+            btnBatallas.Size = new Size(309, 66);
+            btnBatallas.TabIndex = 4;
+            btnBatallas.Text = "Batallas";
+            btnBatallas.UseVisualStyleBackColor = true;
+            btnBatallas.Click += btnRegistrarBatallas_Click;
+            // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(12, 490);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(309, 66);
+            btnSalir.TabIndex = 5;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // button1
             // 
-            button1.Location = new Point(142, 239);
+            button1.Location = new Point(12, 372);
             button1.Name = "button1";
-            button1.Size = new Size(192, 50);
-            button1.TabIndex = 2;
-            button1.Text = "Registrar Inventario";
+            button1.Size = new Size(309, 66);
+            button1.TabIndex = 6;
+            button1.Text = "Top 10 ganadores";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(142, 324);
-            button2.Name = "button2";
-            button2.Size = new Size(192, 50);
-            button2.TabIndex = 3;
-            button2.Text = "Registrar Equipos";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // btnRegistrarBatallas
-            // 
-            btnRegistrarBatallas.Location = new Point(373, 69);
-            btnRegistrarBatallas.Name = "btnRegistrarBatallas";
-            btnRegistrarBatallas.Size = new Size(192, 50);
-            btnRegistrarBatallas.TabIndex = 4;
-            btnRegistrarBatallas.Text = "Registrar Batallas";
-            btnRegistrarBatallas.UseVisualStyleBackColor = true;
-            btnRegistrarBatallas.Click += btnRegistrarBatallas_Click;
+            button1.Click += button1_Click_1;
             // 
             // frmVentanaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnRegistrarBatallas);
-            Controls.Add(button2);
+            ClientSize = new Size(333, 568);
             Controls.Add(button1);
+            Controls.Add(btnSalir);
+            Controls.Add(btnBatallas);
+            Controls.Add(btnEquipos);
+            Controls.Add(btnInventario);
             Controls.Add(btnRegistrarJugador);
             Controls.Add(btnRegistrarCriaturas);
             Name = "frmVentanaPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "MITICAX - Batallas Místicas";
             ResumeLayout(false);
         }
 
@@ -105,8 +129,10 @@
 
         private Button btnRegistrarCriaturas;
         private Button btnRegistrarJugador;
+        private Button btnInventario;
+        private Button btnEquipos;
+        private Button btnBatallas;
+        private Button btnSalir;
         private Button button1;
-        private Button button2;
-        private Button btnRegistrarBatallas;
     }
 }

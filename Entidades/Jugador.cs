@@ -1,9 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/*
+ * UNED III Cuatrimestre
+ * 00830 - Programacion avanzada
+ * Proyecto 1: Batallas Místicas
+ * Estudiante: Oscar Eduardo Cervantes Mora
+ * Fecha: 2025-09-28
+ * @author ocervantesmora
+ */
 namespace Entidades
 {
     public class Jugador

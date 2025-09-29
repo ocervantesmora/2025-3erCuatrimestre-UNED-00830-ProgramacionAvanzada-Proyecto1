@@ -1,5 +1,12 @@
-﻿using Entidades;
-using Entidades.Entidades;
+﻿/*
+ * UNED III Cuatrimestre
+ * 00830 - Programacion avanzada
+ * Proyecto 1: Batallas Místicas
+ * Estudiante: Oscar Eduardo Cervantes Mora
+ * Fecha: 2025-09-28
+ * @author ocervantesmora
+ */
+using Entidades;
 using LogicaDeNegocio;
 
 namespace CervantesOscar_Proyecto1
@@ -130,6 +137,8 @@ namespace CervantesOscar_Proyecto1
             {
                 pDgv.Columns.Add("NivelCriatura", "Nivel");
             }
+            pDgv.ReadOnly = true;
+            pDgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void cmbEquipo1_SelectedIndexChanged(object sender, EventArgs e)
@@ -259,6 +268,8 @@ namespace CervantesOscar_Proyecto1
             if (dgvBatallas.Columns.Contains("Fecha")) dgvBatallas.Columns["Fecha"].DisplayIndex = displayIndexCounter++;
 
             dgvBatallas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBatallas.ReadOnly = true;
+            dgvBatallas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void dgvBatallas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -325,15 +336,12 @@ namespace CervantesOscar_Proyecto1
                 return;
             }
 
-            int idGanadorInicial = 0;
-
             string resultado = batallaLN.RegistrarBatalla(
                 idBatalla,
                 idJugador1,
                 idEquipo1,
                 idJugador2,
-                idEquipo2,
-                idGanadorInicial
+                idEquipo2
             );
 
             MessageBox.Show(resultado, "Registro de Batalla", MessageBoxButtons.OK);

@@ -1,3 +1,11 @@
+/*
+ * UNED III Cuatrimestre
+ * 00830 - Programacion avanzada
+ * Proyecto 1: Batallas Místicas
+ * Estudiante: Oscar Eduardo Cervantes Mora
+ * Fecha: 2025-09-28
+ * @author ocervantesmora
+ */
 namespace CervantesOscar_Proyecto1
 {
     public partial class frmVentanaPrincipal : Form
@@ -45,6 +53,19 @@ namespace CervantesOscar_Proyecto1
             this.Hide();
             frmRegistrarBatallas frmRegistrarBatallas = new frmRegistrarBatallas();
             frmRegistrarBatallas.ShowDialog();
+            this.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTop10 frmTop10 = new frmTop10();
+            frmTop10.ShowDialog();
             this.Show();
         }
     }

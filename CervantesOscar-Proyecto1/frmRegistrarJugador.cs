@@ -1,15 +1,14 @@
-﻿using Entidades;
+﻿/*
+ * UNED III Cuatrimestre
+ * 00830 - Programacion avanzada
+ * Proyecto 1: Batallas Místicas
+ * Estudiante: Oscar Eduardo Cervantes Mora
+ * Fecha: 2025-09-28
+ * @author ocervantesmora
+ */
+using Entidades;
 using LogicaDeNegocio;
-using LogicaDeNegocio;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace CervantesOscar_Proyecto1
 {

@@ -1,9 +1,12 @@
-﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * UNED III Cuatrimestre
+ * 00830 - Programacion avanzada
+ * Proyecto 1: Batallas Místicas
+ * Estudiante: Oscar Eduardo Cervantes Mora
+ * Fecha: 2025-09-28
+ * @author ocervantesmora
+ */
+using Entidades;
 
 namespace AccesoADatos
 {
@@ -76,14 +79,23 @@ namespace AccesoADatos
             return "Criatura agregada al inventario con éxito.";
         }
 
-        public static void IncrementarBatallasGanadas(int pIdJugadorGanador)
+        public static bool ActualizarJugador(Jugador pJugadorModificado)
         {
-            Jugador jugadorGanador = BuscarJugadorPorId(pIdJugadorGanador);
-
-            if (jugadorGanador != null)
+            if (pJugadorModificado == null)
             {
-                jugadorGanador.BatallasGanadas++;
+                return false;
             }
+
+            for (int i = 0; i < indiceJugadores; i++)
+            {
+                if (arregloJugadores[i] != null && arregloJugadores[i].IdJugador == pJugadorModificado.IdJugador)
+                {
+                    arregloJugadores[i] = pJugadorModificado;
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
